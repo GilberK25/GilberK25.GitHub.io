@@ -6,6 +6,7 @@
     --light-dark-color: #252525;
     --lighter-dark-color: #2D2D2D;
     --flair-color: #E65632;
+    --main-text-color: #fff;
 }
 
 *
@@ -14,10 +15,11 @@
     margin: 0;
 }
 
+a
 {
+    color: var(--main-text-color);
     cursor: pointer;
     position: relative;
-    text-decoration: none;
 }
 a::after
 {
@@ -52,25 +54,39 @@ header
     background-color: var(--lighter-dark-color);
     align-items: center;
     display: flex;
-    height: fit-content;
-}
+    height: 4vw;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
 
+    transition: all 0.2s;
+}
+header:hover
+{
+    height: 5vw;
+}
 header img
 {
-    margin: 0.75vw 1vw 0.75vw 2vw;
+    margin: 0 1vw 0 2vw;
     height: 2.5vw;
 }
 header h3
 {
     color: var(--flair-color);
-    width: 20%;
 }
-header .items
+header #header-title
+{
+    align-items: center;
+    display: flex;
+    width: 30%;
+}
+header #header-items
 {
     text-align: left;
     width: 100%;
 }
-header .items *
+header #header-items *
 {
     margin: 0 1vw;
 }
@@ -98,6 +114,11 @@ main h3, main h4, main h5, main h6
 main .para
 {
     margin-top: 7.5vw;
+}
+
+.nounderline
+{
+    text-decoration: none;
 }
 
 .title
