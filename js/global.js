@@ -3,9 +3,9 @@ const internet = new XMLHttpRequest();
 var htmlStr = document.documentElement.innerHTML;
 
 // Insert site parts
-//insertHeader();
+insertHeader();
 insertContents();
-//insertFooter();
+insertFooter();
 
 // Update page
 document.documentElement.innerHTML = htmlStr;
